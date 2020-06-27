@@ -25,7 +25,7 @@ Route::group(['middleware' => 'auth.jwt'], function () {
     Route::get('logout', 'ApiController@logout');
     Route::get('/price', 'PriceController@index');
     Route::post('/price', 'PriceController@create');
-    Route::put('/price/{id}', 'PriceController@update');
-    Route::delete('/price', 'PriceController@destroy');
+    Route::post('/price/update', 'PriceController@update');
+    Route::post('/price/delete', 'PriceController@destroy');
     });
 
